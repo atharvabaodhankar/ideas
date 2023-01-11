@@ -11,7 +11,7 @@ html{
     font-size: 62.5%;
 }
 :root{
-    --yellow :#ecb203  ;
+    --yellow :#ffbf00  ;
     --yellow-d :#d4a003 ;
     --violet : #532ee7;
 }
@@ -77,6 +77,79 @@ html{
 .hero-desc a:hover{
     background-color: var(--yellow-d);
 }
+/* Steps */
+#steps{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 7rem 0;
+}
+.steps-header{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 7rem ;
+}
+.steps-header h2{
+    font-size: 3rem;
+    color: var(--yellow);
+}
+.steps-header h1{
+    font-size: 5rem;
+    color: var(--violet);
+}
+.steps{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+.step-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 300px;
+    margin: 2.5rem 2.5rem;
+}
+.step-box i{
+    font-size: 3rem;
+    padding: 2rem ;
+    background-color: var(--yellow);
+    color: #ffff;
+    border-radius: 50%;
+    position: relative;
+    border: 2px solid #fff;
+}
+.step-box i::after{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--violet);
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    transform: scale(1.3);
+    z-index: -1;
+}
+.step-box h1{
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+.step-box p{
+    font-size: 1.6rem;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 2.5rem;
+    font-weight: 300;
+}
+
 @media screen and (max-width:1150px) {
     .hero-img {
         width: 387px;
@@ -117,6 +190,14 @@ html{
 
     }
 }
+@media screen and (max-width:700px) {
+    .step-box {
+        width: 80%;
+    }
+    .steps-header {
+      padding: 0 2.5rem ;
+    }
+}
 @media screen and (max-width:500px) {
     .hero-img {
         width: 100%;
@@ -133,6 +214,12 @@ html{
     }
     .hero-desc a {
         padding: 2rem 5rem;
+    }
+    .steps-header h1 {
+        font-size: 4rem;
+    }
+    .steps-header h2 {
+        font-size: 2.6rem;
     }
 }
 @media screen and (max-width:000px) {
