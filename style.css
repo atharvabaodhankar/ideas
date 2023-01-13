@@ -254,8 +254,105 @@ html{
 .rating-box:nth-child(4) .rating-bar .rating-bar-inner{
     width: 65%;
 }
-
-
+/* Specs */
+#specs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 7rem 0;
+}
+.specs-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+    padding: 0 2.5rem;
+}
+.specs-header h1{
+    font-size: 5rem;
+    color: var(--violet);
+}
+.specs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.specs-box-outer:hover .specs-box{
+    transform: rotateY(180deg);
+}
+.specs-box{
+    position: relative;
+    width: 350px;
+    height: 450px;
+    transform-style: preserve-3d;
+    border-radius: 1rem;
+    transition: all .3s ease;
+    margin: 0 2.5rem;
+    cursor: pointer ;
+}
+.specs-box-front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    backface-visibility: hidden;
+    transition: all .3s ease;
+}
+.specs-box-front img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    filter: saturate(2);
+}
+.specs-box-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 2rem;
+    filter: saturate(2);
+    backface-visibility: hidden;
+    transition: all .3s ease;
+    transform: rotateY(180deg);
+}
+.specs-box-back-main{
+    background-image: url(maxim-berg-u8maxDvbae8-unsplash.jpg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem;
+    filter: blur(2px) saturate(1.2);
+}
+.specs-box-back-inner{
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.specs-box-back-inner h1{
+    font-size: 4rem;
+    color: #532ee7;
+}
+.specs-box-back-inner p{
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    color: #fff;
+    margin-top: 2rem;
+    color: var(--violet);
+}
 @media screen and (max-width:1250px) {
     .rating {
         width: 440px;
@@ -263,6 +360,13 @@ html{
     .rating-img {
         width: 350px;
         height: 350px;
+    }
+    .specs-box {
+        width: 285px;
+        height: 405px;
+    }
+    .specs-box{
+        margin: 2.5rem 2.5rem;
     }
 }
 @media screen and (max-width:1150px) {
@@ -333,6 +437,12 @@ html{
       padding: 0 2.5rem ;
     }
 }
+@media screen and (max-width:650px) {
+    .specs-box {
+        width: 350px;
+        height: 435px;
+    }
+}
 @media screen and (max-width:500px) {
     .hero-img {
         width: 100%;
@@ -357,8 +467,26 @@ html{
         font-size: 2.6rem;
     }
 }
-@media screen and (max-width:000px) {
-    
+@media screen and (max-width:450px) {
+    .specs{
+        width: 100%;
+    }
+    .specs-box-outer{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .specs-box {
+        width: 90%;
+        height: 435px;
+    }
+    .specs-header{
+        text-align: center;
+    }
+    .specs-box {
+        margin: 2.5rem 0;
+    }
 }
 @media screen and (max-width:000px) {
     
