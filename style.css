@@ -543,6 +543,68 @@ nav ul li a:hover::after{
     color: #545454;
     font-weight: 400;
 }
+/* Products */
+#products{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7rem 0;
+}
+.products-img{
+    width: 520px;
+    height: 350px;
+    padding: 1rem;
+    border: 1px solid #e3e2e2;
+    margin-right: 2rem ;
+}
+.products-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.products-desc{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: left;
+    padding: 0 2.5rem;
+    width: 600px;
+}
+.products-desc h2{
+    font-size: 1.7rem;
+    background-color: var(--yellow);
+    padding: 0rem .4rem;
+    color: #383838;
+}
+.products-desc h1{
+    font-size: 5rem;
+    color: var(--violet);
+    margin: 1rem 0;
+}
+.products-desc p{
+    font-size: 1.6rem;
+    color: #383838;
+    line-height: 2.5rem ;
+}
+.products-desc a {
+    font-size: 1.8rem;
+    color: #383838;
+    background-color: var(--yellow);
+    margin: 2rem 0;
+    padding: 1.2rem 0;
+    width: 150px;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    transition: all .3s ease;
+}
+.products-desc a:hover{
+    letter-spacing: .1rem;
+}
+
 @media screen and (max-width:1250px) {
     .rating {
         width: 440px;
@@ -569,6 +631,13 @@ nav ul li a:hover::after{
     }
     .hero {
         width: 850px;
+    }
+    .products-img {
+        width: 429px;
+        height: 370px;
+    }
+    .products-desc {
+        width: 370px;
     }
 }
 @media screen and (max-width:900px) {
@@ -618,6 +687,16 @@ nav ul li a:hover::after{
         width: 80%;
         margin-top: 9rem;
     }
+    #products{
+        flex-direction: column;
+    }
+    .products-img{
+        margin-right: 0;
+        margin-bottom: 5rem;
+    }
+    .products-desc{
+        width: 80%;
+    }
 }
 @media screen and (max-width:700px) {
     .step-box {
@@ -634,6 +713,15 @@ nav ul li a:hover::after{
     .specs-box {
         width: 350px;
         height: 435px;
+    }
+    .products-desc{
+        width: 95%;
+    }
+    .products-img {
+        width: 90%;
+    }
+    nav ul{
+        width: 100%;
     }
 }
 @media screen and (max-width:500px) {
@@ -659,6 +747,9 @@ nav ul li a:hover::after{
     .steps-header h2 {
         font-size: 2.6rem;
     }
+    .products-desc h1 {
+        font-size: 4rem;
+    }
 }
 @media screen and (max-width:450px) {
     .specs{
@@ -683,6 +774,9 @@ nav ul li a:hover::after{
     .features-box {
         margin: 2.5rem 0;
         width: 90%;
+    }
+    .products-img {
+        height: 300px;
     }
 }
 @media screen and (max-width:000px) {
